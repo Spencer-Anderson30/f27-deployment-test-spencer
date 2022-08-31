@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 //This is how Heroku finds your html file^^^
 //__dirname(current directory name) is the location of server.js
 
-app.get('/css', () => {
+app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, "../client/styles.css"))
 })
 
